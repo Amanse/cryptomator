@@ -25,7 +25,7 @@ jobs:
     - name: Get submodules
       run: git submodule init && git submodule update 
     - name: Build with Gradle
-      run: ./gradlew assembleApkstoreDebug
+      run: DROPBOX_API_KEY_DEBUG=bf16cwjfe0r54vr ONEDRIVE_API_KEY_DEBUG=b57c3880-c857-4588-b02e-5da3c5b2174c ONEDRIVE_API_REDIRCT_URI_DEBUG=msauth://org.cryptomator/%2FMI0AUvjnpgOvKXEd5IvIxLoDN0%3D ./gradlew assembleApkstoreDebug
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
